@@ -1,0 +1,472 @@
+/*
+
+	<div class="bigBrowser clearfix">
+		hello world
+	</div>  
+
+    <div class="browser browser--dark browser--fluid">
+       <div class="browser-bar">
+          <div class="browser-button"></div>
+          <div class="browser-button"></div>
+          <div class="browser-button"></div>
+       </div>
+       <div class="browser-content">
+        hello world
+       </div>
+    </div>
+    
+        
+    <div class="iphone iphone--dark iphone--small" style="position: absolute; top: 183px; left: 50px;">
+       <div class="iphone-camera"></div>
+       <div class="iphone-sensor"></div>
+       <div class="iphone-earpiece"></div>
+       <div class="iphone-content">
+        hello world
+       </div>
+       <div class="iphone-home"></div>
+    </div>   
+    
+    
+    <div class="ipadmini-landscape ipadmini-landscape--dark" style="position: absolute; top: 183px; left: 250px;">
+       <div class="ipadmini-landscape-camera"></div>
+       <div class="ipadmini-landscape-content">
+        hello world
+       </div>
+       <div class="ipadmini-landscape-home"></div>
+    </div>   
+
+*/
+
+.bigBrowser {
+  margin: 0 auto;
+  padding-top: 7.8%;
+  max-height: 370px;
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 8px;
+  border: 3px solid #ebebeb;
+  background: #fff url(browser.png) no-repeat 50% 0;
+  background-size: 100%;
+  color: #d3d3d3;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Browser chrome with small and dark variations
+   ========================================================================== */
+.browser {
+  width: 785px;
+}
+.browser-bar {
+  border-radius: 6px 6px 0 0;
+  height: 41px;
+  font-size: 1px;
+  background-color: #e0e0e0;
+  line-height: 26px;
+}
+.browser-button {
+  display: inline-block;
+  height: 21px;
+  font-size: inherit;
+  margin-left: 6px;
+}
+.browser-button:first-child {
+  margin-left: 8px;
+}
+.browser-button:before {
+  content: "\25cf";
+  font-size: 30px;
+  line-height: 40px;
+  color: #7f7f7f;
+}
+.browser-content {
+  position: relative;
+  height: 565px;
+  background-color: #fff;
+  height: 100%;
+  text-align: center;
+}
+.browser--small {
+  width: 400px;
+}
+.browser--small .browser-bar {
+  height: 11px;
+  line-height: 11px;
+}
+.browser--small .browser-button {
+  height: 11px;
+  margin-left: 5px;
+}
+.browser--small .browser-button:first-child {
+  margin-left: 7px;
+}
+.browser--small .browser-button:before {
+  line-height: 11px;
+  font-size: 5px;
+}
+.browser--small .browser-content {
+  height: 300px;
+}
+.browser--dark .browser-bar {
+  background-color: #383838;
+}
+.browser--dark .browser-button:before {
+  color: #222;
+}
+.browser--fluid {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px;
+  /* TODO: 80% */
+  overflow: hidden;
+}
+.browser--fluid .browser-bar {
+  position: absolute;
+  width: 100%;
+}
+.browser--fluid .browser-content {
+  top: 41px;
+  overflow: hidden;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;    
+}
+.browser--fluid.browser--dark .browser-content {
+   border-bottom: 5px solid #383838;
+  border-left: 5px solid #383838;
+  border-right: 5px solid #383838;  
+}
+.browser--fluid.browser--small .browser-content {
+  top: 11px;
+}
+.browser--bottom .browser-content img {
+  position: absolute;
+  bottom: 21px;
+}
+.browser--bottom.browser--small .browser-content img {
+  position: absolute;
+  bottom: 11px;
+}
+.browser--full {
+  padding-bottom: 0;
+  height: 100%;
+}
+.browser--full .browser-content {
+  height: 98%;
+}
+.browser--shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, .06) 0px 3px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, .06) 0px 3px 10px;
+  box-shadow: rgba(0, 0, 0, .06) 0px 3px 10px;
+}
+/* ==========================================================================
+   iPhone chrome with small, medium and dark variations
+   ========================================================================== */
+.iphone {
+  display: block;
+  width: 228px;
+  height: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.iphone-camera {
+  height: 1.9%;
+  width: 4%;
+  border-radius: 100%;
+  margin: 6% auto 4%;
+  background-color: #181818;
+}
+.iphone-sensor {
+  display: inline-block;
+  height: 1.5%;
+  width: 3.1%;
+  border-radius: 100%;
+  float: left;
+  background-color: #181818;
+  position: relative;
+  left: 35%;
+  top: 1px;
+}
+.iphone-earpiece {
+  position: relative;
+  width: 18.4%;
+  margin: 1% auto 6.5%;
+  height: 1.7%;
+  border-radius: 15px;
+}
+.iphone-earpiece:after {
+  content: "";
+  display: table;
+}
+.iphone-content {
+  position: relative;
+  width: 88%;
+  height: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #222;
+}
+.iphone-home {
+  width: 18.4%;
+  height: 8.75%;
+  margin: 5.3% auto 0;
+  background-color: #dfdfdf;
+  border-radius: 100%;
+  border-radius: 999px;
+  /* Fallback */
+  -webkit-border-radius: 999px;
+  /* < Safari 6 */
+}
+.iphone--dark {
+  background-color: #383838;
+}
+.iphone--dark .iphone-home {
+  background-color: #181818;
+}
+.iphone--dark .iphone-earpiece {
+  background-color: #181818;
+}
+.iphone--light {
+  background-color: #e3e3e3;
+}
+.iphone--light .iphone-home {
+  background-color: #c7c7c7;
+}
+.iphone--light .iphone-camera {
+  background-color: #aaa;
+}
+.iphone--light .iphone-sensor {
+  background-color: #aaa;
+}
+.iphone--light .iphone-earpiece {
+  background-color: #aaa;
+}
+.iphone--small {
+  width: 152px;
+  height: 320px;
+  border-radius: 18px;
+}
+.iphone--large {
+  width: 360px;
+  height: 750px;
+  border-radius: 40px;
+}
+.iphone--large .iphone-home {
+  margin-top: 6%;
+  width: 15.6%;
+  height: 7.4%;
+}
+.iphone--large .iphone-content {
+  width: 88.889%;
+  height: 75.8%;
+}
+.touch .sitefilter-profile--customer .browser-content,
+.touch .designs-details--mobiledemo .iphone-content,
+.touch .designs-details--browserdemo .browser-content {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.iphone-content {
+  -webkit-backface-visibility: hidden;
+  /* Fixes random 1px gap on the right */
+}
+/* ==========================================================================
+   iPad Mini chrome with small, medium and dark variations
+   ========================================================================== */
+.ipadmini-landscape {
+  display: block;
+  width: 640px;
+  height: 432px;
+  border-radius: 36px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.ipadmini-landscape-camera {
+  height: 1.5%;
+  width: 1%;
+  border-radius: 100%;
+  margin: 33% 4% auto 5%;
+  background-color: #dfdfdf;
+  display: inline-block;
+  float: left;
+}
+.ipadmini-landscape-content {
+  position: relative;
+  height: 89%;
+  width: 80%;
+  margin: 4% auto;
+  overflow: hidden;
+  background-color: #222;
+  display: inline-block;
+  float: left;
+  box-sizing: border-box;
+  border: 2px solid #dfdfdf;
+}
+.ipadmini-landscape-home {
+  height: 7.4%;
+  width: 5%;
+  margin: 31% 0 0 2.5%;
+  background-color: #dfdfdf;
+  display: inline-block;
+  float: left;
+  border-radius: 100%;
+  border-radius: 999px;
+  /* Fallback */
+  -webkit-border-radius: 999px;
+  /* < Safari 6 */
+}
+.ipadmini-landscape--dark {
+  background-color: #383838;
+}
+.ipadmini-landscape--dark .ipadmini-landscape-home {
+  background-color: #181818;
+}
+.ipadmini-landscape--dark .ipadmini-landscape-content {
+  border-color: #181818;
+}
+.ipadmini-landscape--dark .ipadmini-landscape-camera {
+  background-color: #181818;
+}
+.ipadmini-landscape--light {
+  background-color: #e3e3e3;
+}
+.ipadmini-landscape--light .ipadmini-landscape-home {
+  background-color: #c7c7c7;
+}
+.ipadmini-landscape--light .ipadmini-landscape-camera {
+  background-color: #aaa;
+}
+.ipadmini-landscape--light .ipadmini-landscape-content {
+  border-color: #aaa;
+}
+.ipadmini-landscape--large {
+  width: 768px;
+  height: 514px;
+  border-radius: 48px;
+}
+.ipadmini-landscape--medium {
+  width: 640px;
+  height: 432px;
+}
+.ipadmini-landscape--small {
+  width: 320px;
+  height: 214px;
+  border-radius: 24px;
+}
+/* ==========================================================================
+   Android chrome with small, medium and dark variations
+   ========================================================================== */
+.android {
+  display: block;
+  width: 270px;
+  height: 540px;
+  border-radius: 28px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.android-camera {
+  height: 3%;
+  width: 6%;
+  border-radius: 100%;
+  margin: 8% auto 1.5% 85%;
+  background-color: #181818;
+}
+.android-sensor {
+  display: inline-block;
+  height: 1.5%;
+  width: 3%;
+  border-radius: 100%;
+  float: left;
+  background-color: #181818;
+  position: relative;
+  left: 15%;
+  top: 4.5%;
+}
+.android-sensor-right {
+  margin-left: 1%;
+}
+.android-content {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #1d1d1d;
+}
+.android-content .image-wrapper {
+  width: 94%;
+  height: 90%;
+  overflow: hidden;
+  margin: 3% auto 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+.adroid-button:before {
+  display: block;
+  content: '\2715';
+  color: #383838;
+  font-size: 110%;
+  position: absolute;
+  bottom: 2%;
+  left: 25%;
+}
+.android-button-right.adroid-button:before {
+  content: '\25CB';
+  left: auto;
+  right: 25%;
+  font-size: 220%;
+}
+.android--dark {
+  background-color: #383838;
+}
+.android--dark .android-sensor-right {
+  background-color: #181818;
+}
+.android--light {
+  background-color: #e3e3e3;
+}
+.android--light .android-camera {
+  background-color: #aaa;
+}
+.android--light .android-sensor {
+  background-color: #aaa;
+}
+.android--light .android-sensor-right {
+  background-color: #aaa;
+}
+.android--small {
+  width: 152px;
+  height: 304px;
+  border-radius: 18px;
+}
+.android--small .adroid-button:before {
+  font-size: 145%;
+  bottom: 3%;
+}
+.android--small .android-button-right.adroid-button:before {
+  font-size: 290%;
+}
+.android--large {
+  width: 360px;
+  height: 720px;
+  border-radius: 40px;
+}
+.android--large .adroid-button:before {
+  font-size: 60%;
+  bottom: 0%;
+}
+.android--large .android-button-right.adroid-button:before {
+  font-size: 120%;
+}
+.touch .sitefilter-profile--customer .browser-content,
+.touch .designs-details--mobiledemo .android-content,
+.touch .designs-details--browserdemo .browser-content {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.android-content {
+  -webkit-backface-visibility: hidden;
+  /* Fixes random 1px gap on the right */
+}

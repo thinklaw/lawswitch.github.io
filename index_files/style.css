@@ -217,7 +217,7 @@ input.input-field {
 }
 
 
-input.email, input#subscribe {
+input.email, input#subscribe, a#subscribe {
     font-weight: bold;
     text-align: center;
     border-radius: 4px;
@@ -227,8 +227,13 @@ input.email, input#subscribe {
     margin-top: 20px;
 }
 
-input.button {
+input.button, a#subscribe {
     background: #ffd43f;
+    color: #111;
+}
+
+a#subscribe {
+    padding-top: 12px;
 }
 
 .about-cards {
