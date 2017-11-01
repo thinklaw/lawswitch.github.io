@@ -54,48 +54,6 @@ input.input-field {
     padding-right:0;
 }
 
-.navbar {
-  border-color: #fafafa;
-  border-width: 0;
-  margin-bottom: 0;
-}
-
-.navbar-default {
-    background-color: #fafafa;
-}
-
-.navbar-toggle {
-    border: 0px;
-}
-
-.navbar-nav li a {
-    line-height: 50px;
-    height: 50px;
-    padding-top: 0;
-    padding-bottom: 0;
-    color: #737373;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.navbar-brand {
-    line-height: 86px;
-    height: 86px;
-    padding: 0 15px;
-}
-.navbar-brand img {
-    display: inline-block;
-    height: 36px;
-}
-
-.navbar-toggle {
-    margin-top: 27px;
-    margin-bottom: 0px;
-}
-#navbar-collapse-1 {
-  border-color: #fcfcfc;
-  border-width: 0;
-}
-
 .top-section {
     text-align: center;
 }
@@ -221,15 +179,15 @@ input.email, input#subscribe, a#subscribe {
     font-weight: bold;
     text-align: center;
     border-radius: 4px;
-    height: 44px;
+    height: 50px;
     width: 90%;
     max-width: 350px;
-    margin-top: 20px;
 }
 
 input.button, a#subscribe {
-    background: #ffd43f;
-    color: #111;
+    background: #0198d9;
+    color: #fff;
+    font-size: 18px;
 }
 
 a#subscribe {
